@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center">
+    <form class="col-md-6" name="vin-form">
+      <div class="mb-3 ">
+        <label for="txtVinNumber" class="form-label">Enter VIN Number</label>
+        <input
+          type="text"
+          class="form-control"
+          name="txtVinNumber"
+          [(ngModel)]="vin"
+          aria-describedby="txtVinNumber"
+          autocomplete="off"
+          (ngModelChange)="valuechange($event)"
+          
+        />
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="decodeVin()">
+        Submit
+      </button>
+      <div id="passwordHelpBlock" class="form-text">
+        Note : This VIN decoder supports only Tata manufactured vehicles.         
+      </div>
+      <div>
+          <h4>{{result}}</h4>
+      </div>
+    </form>
+ 
+</div>
